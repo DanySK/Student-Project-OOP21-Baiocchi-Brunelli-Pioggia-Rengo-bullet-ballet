@@ -95,6 +95,13 @@ tasks.withType<Jar> {
     })
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDirs("res/", "data/")
+        }
+    }
+}
 allprojects {
     apply(plugin = "checkstyle")
     apply(plugin = "pmd")
