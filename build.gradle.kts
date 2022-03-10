@@ -93,16 +93,7 @@ tasks.withType<Jar> {
     from({
       configurations["runtimeClasspath"].map { if(it.isDirectory) it else zipTree(it) }
     })
-}
-
-sourceSets {
-    main {
-        resources {
-            srcDirs("res/", "data/")
-        }
-    }
-}
-allprojects {
+}allprojects {
     apply(plugin = "checkstyle")
     apply(plugin = "pmd")
     apply(plugin = "de.aaschmid.cpd")
