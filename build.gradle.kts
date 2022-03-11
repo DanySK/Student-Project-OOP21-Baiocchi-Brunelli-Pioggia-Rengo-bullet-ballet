@@ -93,7 +93,9 @@ tasks.withType<Jar> {
     from({
       configurations["runtimeClasspath"].map { if(it.isDirectory) it else zipTree(it) }
     })
-}allprojects {
+}
+
+allprojects {
     apply(plugin = "checkstyle")
     apply(plugin = "pmd")
     apply(plugin = "de.aaschmid.cpd")
