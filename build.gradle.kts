@@ -103,7 +103,6 @@ allprojects {
 
     tasks.withType<Test> {
         ignoreFailures = true
-        useJUnitPlatform()
     }
 
     spotbugs {
